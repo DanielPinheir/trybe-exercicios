@@ -2,7 +2,7 @@
 
 - Primeiramente inicia-se um repositório em alguma pasta com o comando:
   ``git init``
-- Cria uma branch relacionada as tarefas a serem feitas e já mudar para ela com o comado:
+- Cria uma branch nomeando ela de acordo com as tarefas a serem feitas e já muda para ela com o comando:
 ``git checkout -b <nome_da _branch>``
 - Após as mudanças no repositório, temos que enviar as informações para staging com o comando:
 ``git add .`` ou ``git add <nome_do_arquivo>``
