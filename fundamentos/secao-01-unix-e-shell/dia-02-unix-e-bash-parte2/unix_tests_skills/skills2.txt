@@ -1,0 +1,5 @@
+Ububtu
+MAC OS
+Power shell
+Github
+ZSH
