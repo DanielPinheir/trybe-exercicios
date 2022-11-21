@@ -1,0 +1,17 @@
+h1,
+p {
+  text-align: center;
+}
+
+.list-best-sites:hover {
+  background-color: coral;
+}
+
+.list-best-sites:active {
+  color: blue;
+}
+
+.list-best-sites,
+.like {
+  list-style: none;
+}
