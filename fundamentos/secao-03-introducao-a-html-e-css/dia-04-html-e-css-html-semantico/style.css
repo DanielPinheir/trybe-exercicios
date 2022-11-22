@@ -2,18 +2,18 @@ body {
   background-color: aqua;
 }
 
-header ul li {
+#links-nav ul li {
   display: inline-block;
 }
 
-header ul li a {
+#links-nav ul li a {
   color: beige;
   margin: 10px;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
-header nav {
+#links-nav {
   background-color: orange;
   padding: 10px;
   font-size: large;
