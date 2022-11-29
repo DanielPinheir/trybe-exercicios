@@ -56,21 +56,21 @@
 // }
 
 //maior valor contido num array
-// let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
+let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 
-// var maxNumberArray = numbers[0];
-// for (let index = 0; index < numbers.length; index++) {
-//   if (numbers[index] > maxNumberArray) {
-//     maxNumberArray = numbers[index];
-//   }
-// }
+let maxNumberArray = numbers[0];
+for (let index = 0; index < numbers.length; index++) {
+  if (numbers[index] > maxNumberArray) {
+    maxNumberArray = numbers[index];
+  }
+}
 
-// console.log(maxNumberArray);
+console.log(maxNumberArray);
 
 //menor valor contido num array
 // let numbers = [5, 9, 3, 19, 70, 8, 100, 2, 35, 27];
 
-// var minNumberArray = numbers[0];
+// let minNumberArray = numbers[0];
 // for (let index = 0; index < numbers.length; index++) {
 //   if (numbers[index] < minNumberArray) {
 //     minNumberArray = numbers[index];
