@@ -37,9 +37,14 @@ const createDaysOfTheMonth = () => {
     dayNumber === 24 || dayNumber === 25 || dayNumber === 31
       ? (elementLi.className = 'day holiday')
       : (elementLi.className = 'day');
-    dayNumber === 4 || dayNumber === 11 || dayNumber === 18 || dayNumber === 25
-      ? (elementLi.className = 'day friday')
-      : (elementLi.className = 'day');
+    if (
+      dayNumber === 4 ||
+      dayNumber === 11 ||
+      dayNumber === 18 ||
+      dayNumber === 25
+    ) {
+      elementLi.className += ' friday';
+    }
     monthDayslist.appendChild(elementLi);
   }
 };
