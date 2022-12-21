@@ -30,7 +30,7 @@ const createDaysOfTheMonth = () => {
 
   const monthDayslist = document.querySelector('#days');
 
-  for (let index = 0; index <= decemberDaysList.length; index += 1) {
+  for (let index = 0; index < decemberDaysList.length; index += 1) {
     const dayNumber = decemberDaysList[index];
     const elementLi = document.createElement('li');
     elementLi.innerHTML = dayNumber;
@@ -49,3 +49,74 @@ const createDaysOfTheMonth = () => {
   }
 };
 createDaysOfTheMonth();
+
+//parte2
+const createHolidayButton = () => {
+  const divButtons = document.querySelector('.buttons-container');
+  const elementButton = document.createElement('button');
+  elementButton.innerHTML = 'Feriados';
+  elementButton.id = 'btn-holiday';
+  divButtons.appendChild(elementButton);
+};
+
+createHolidayButton();
+
+//parte3
+const backGroundColorHoliday = () => {
+  const holidayDays = document.querySelectorAll('.holiday');
+  const holidayButton = document.querySelector('#btn-holiday');
+  let clickButton = true;
+  holidayButton.addEventListener('click', () => {
+    if (clickButton) {
+      for (let index = 0; index < holidayDays.length; index += 1) {
+        holidayDays[index].style.backgroundColor = 'orange';
+      }
+      clickButton = false;
+    } else {
+      for (let index = 0; index < holidayDays.length; index += 1) {
+        holidayDays[index].style.backgroundColor = 'rgb(238,238,238)';
+      }
+      clickButton = true;
+    }
+  });
+};
+
+backGroundColorHoliday();
+
+//parte4
+const createFridayButton = () => {
+  const divButtons = document.querySelector('.buttons-container');
+  const elementButton = document.createElement('button');
+  elementButton.innerHTML = 'Sexta-feira';
+  elementButton.id = 'btn-friday';
+  divButtons.appendChild(elementButton);
+};
+
+createFridayButton();
+
+//parte5
+const changeTextFriday = () => {
+  const fridayButton = document.querySelector('#btn-friday');
+  const fridayDays = document.querySelectorAll('.friday');
+  let isFriday = true;
+  const listFridayDaysInTheMonth = [];
+
+  fridayButton.addEventListener('click', () => {
+    if (isFriday) {
+      for (index = 0; index < fridayDays.length; index += 1) {
+        listFridayDaysInTheMonth.push(fridayDays[index].innerHTML);
+        fridayDays[index].innerHTML = 'Friday';
+        fridayDays[index].style.color = 'green';
+      }
+      isFriday = false;
+    } else {
+      for (index = 0; index < fridayDays.length; index += 1) {
+        fridayDays[index].innerHTML = listFridayDaysInTheMonth[index];
+        fridayDays[index].style.color = '#777';
+      }
+      isFriday = true;
+    }
+  });
+};
+
+changeTextFriday();
