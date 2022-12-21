@@ -143,3 +143,10 @@ dayMouseOver();
 dayMouseOut();
 
 //parte7
+const addTasks = (taskName) => {
+  const tasks = document.querySelector('.my-tasks');
+  const elementSpan = document.createElement('span');
+  elementSpan.innerHTML = taskName;
+  tasks.appendChild(elementSpan);
+};
+addTasks('Estudar');
