@@ -22,14 +22,12 @@ const createDaysOfTheWeek = () => {
 createDaysOfTheWeek();
 
 //parte1
+const decemberDaysList = [
+  29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+  21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31,
+];
 const createDaysOfTheMonth = () => {
-  const decemberDaysList = [
-    29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
-    20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31,
-  ];
-
   const monthDayslist = document.querySelector('#days');
-
   for (let index = 0; index < decemberDaysList.length; index += 1) {
     const dayNumber = decemberDaysList[index];
     const elementLi = document.createElement('li');
@@ -120,3 +118,28 @@ const changeTextFriday = () => {
 };
 
 changeTextFriday();
+
+//parte6
+const dayMouseOver = () => {
+  const dayMonth = document.querySelector('#days');
+  dayMonth.addEventListener('mouseover', (event) => {
+    // Ele pega o evento alvo e altera o estilo de fontSize para 30px
+    event.target.style.fontSize = '30px';
+    // Ele pega o evento alvo e altera o estilo de fontWeight para 600
+    event.target.style.fontWeight = '600';
+  });
+};
+
+const dayMouseOut = () => {
+  const dayMonth = document.querySelector('#days');
+  dayMonth.addEventListener('mouseout', (event) => {
+    // Ele pega o evento alvo e altera o estilo de fontSize para 20px
+    event.target.style.fontSize = '20px';
+    // Ele pega o evento alvo e altera o estilo de fontWeight para 200
+    event.target.style.fontWeight = '200';
+  });
+};
+dayMouseOver();
+dayMouseOut();
+
+//parte7
