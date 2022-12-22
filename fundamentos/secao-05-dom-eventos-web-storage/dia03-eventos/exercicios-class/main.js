@@ -7,7 +7,7 @@ const myWebpage = document.getElementById('my-spotrybefy');
 // - Copie esse arquivo e edite apenas ele;
 //  - Note que uma das caixas está um pouco acima das outras.
 // Por que isso ocorre?
-//Ele coloca uma propriedade no CSS => transform: translateY(-20px);
+//Ele coloca uma propriedade no CSS => transform: translateY(-20px);git-
 // - Crie uma função que adicione a classe 'tech' ao elemento `li`
 // quando for clicado.
 //  - Deve existir apenas um elemento com a classe 'tech'. Como você faz isso?
