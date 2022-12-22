@@ -197,3 +197,32 @@ const setDayColor = () => {
 };
 
 setDayColor();
+
+//bonus
+const addMyAppointments = () => {
+  const getInputField = document.querySelector('#task-input');
+  const buttonAdd = document.querySelector('#btn-add');
+  const taskList = document.querySelector('.task-list');
+
+  buttonAdd.addEventListener('click', () => {
+    // Caso o input tenha um valor de caracteres maior que 0
+    if (getInputField.value.length > 0) {
+      let newLi = document.createElement('li');
+      newLi.innerText = `- ${getInputField.value}`;
+      taskList.appendChild(newLi);
+      getInputField.value = '';
+    } else {
+      alert('Error: Digite ao menos 1 caractere');
+    }
+  });
+
+  getInputField.addEventListener('keyup', (event) => {
+    if (event.key === 'Enter' && getInputField.value.length > 0) {
+      let newLi = document.createElement('li');
+      newLi.innerText = `- ${getInputField.value}`;
+      taskList.appendChild(newLi);
+      getInputField.value = '';
+    }
+  });
+};
+addMyAppointments();
