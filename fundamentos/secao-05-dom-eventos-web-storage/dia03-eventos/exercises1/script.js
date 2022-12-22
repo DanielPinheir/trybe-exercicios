@@ -150,3 +150,50 @@ const addTasks = (taskName) => {
   tasks.appendChild(elementSpan);
 };
 addTasks('Estudar');
+
+//parte8
+const addLegendCor = (corName) => {
+  const myTasksClass = document.querySelector('.my-tasks');
+  const elementDiv = document.createElement('div');
+  elementDiv.className = 'task';
+  elementDiv.style.backgroundColor = corName;
+  myTasksClass.appendChild(elementDiv);
+};
+addLegendCor('orange');
+
+//parte09
+const selectTask = () => {
+  const selectedTask = document.querySelectorAll('.task selected');
+  const taskClass = document.querySelector('.task');
+  taskClass.addEventListener('click', (event) => {
+    // Caso selectedTask retornar um array com nenhum item
+    if (selectedTask.length === 0) {
+      event.target.className = 'task selected';
+      isTaskSelect = true;
+    } else {
+      event.target.className = 'task';
+    }
+  });
+};
+selectTask();
+
+//parte10
+const setDayColor = () => {
+  let selectedTask = document.getElementsByClassName('task selected');
+  let days = document.querySelector('#days');
+  let taskDiv = document.querySelector('.task');
+  let taskColor = taskDiv.style.backgroundColor;
+
+  days.addEventListener('click', (event) => {
+    let eventTargetColor = event.target.style.color;
+    console.log(eventTargetColor);
+    if (selectedTask.length > 0 && eventTargetColor !== taskColor) {
+      let color = selectedTask[0].style.backgroundColor; // Pega a cor de fundo do primeiro elemento salvo na variável "selectedTask" e salva na variável "color"
+      event.target.style.color = color; // atribui a cor salva na variável "color" ao evento alvo
+    } else if (eventTargetColor === taskColor) {
+      event.target.style.color = 'rgb(119,119,119)'; // Altera a cor de fundo do evento alvo para "rgb(119, 119, 119)"
+    }
+  });
+};
+
+setDayColor();
