@@ -4,124 +4,171 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=f, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Formulário</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <header>
-      <h1>Formulário completo:</h1>
+      <h1 class="display-3 text-muted">Formulário completo:</h1>
     </header>
     <main>
       <form action="" method="get">
-        <label for="input-email"
-          >E-mail:
+        <div class="form-group mb-2">
+          <label class="form-label" for="input-email"
+            >E-mail:
+            <input
+              class="form-control"
+              type="email"
+              name="email"
+              id="input-email"
+              placeholder="Digite seu email"
+              required
+              autocomplete="off"
+              autofocus
+            />
+          </label>
+        </div>
+        <div class="form-group mb-2">
+          <label class="form-label" for="input-senha"
+            >Senha:
+            <input
+              class="form-control"
+              type="password"
+              name="senha"
+              id="input-senha"
+              placeholder="Digite sua senha"
+              required
+            />
+          </label>
+        </div>
+        <div class="form-group mb-2">
           <input
-            type="email"
-            name="email"
-            id="input-email"
-            placeholder="Digite seu email"
-            required
-            autocomplete="off"
-            autofocus
-          />
-        </label>
-        <br />
-        <label for="input-senha"
-          >Senha:
-          <input
-            type="password"
-            name="senha"
-            id="input-senha"
-            placeholder="Digite sua senha"
-            required
-          />
-        </label>
-        <br />
-        <input type="checkbox" name="remember" id="remember" />Lembre-me
-        <input type="button" value="Entrar" />
-      </form>
-      <br />
-      <form action="" method="get">
-        <label for="nome-completo"
-          >Nome completo:
-          <input
-            type="text"
-            name="nome"
-            id="nome-completo"
-            placeholder="Digite seu nome"
-            required
-          />
-        </label>
-        <br />
-        <label for="nome-completo"
-          >E-mail:
-          <input
-            type="email"
-            name="email"
-            id="input-email"
-            placeholder="Digite seu e-mail"
-            required
-          />
-        </label>
-        <br />
-        <label for=""
-          >Estado onde você mora:
-          <select name="estado" id="input-estado">
-            <option value="sp" selected>São Paulo</option>
-            <option value="mg">Minas Gerais</option>
-            <option value="ap">Amapá</option>
-            <option value="rs">Rio Grande so Sul</option>
-          </select>
-        </label>
-        <br />
-        <p>Selecione a sua foto:</p>
-        <input type="file" name="foto" id="foto-perfil" />
-        <br />
-        <p>Comidas favoritas:</p>
-        <label for="comida-1">
-          <input
-            type="radio"
-            name="comida-favorita"
-            id="comida-1"
-            value="pizza"
-            checked
-          />Pizza
-          <input
-            type="radio"
-            name="comida-favorita"
-            id="comida-2"
-            value="sorvete"
-          />Sorvete
-          <input
-            type="radio"
-            name="comida-favorita"
-            id="comida-3"
-            value="Pão de queijo"
-          />Pão de queijo
-          <input
-            type="radio"
-            name="comida-favorita"
-            id="comida-4"
-            value="outro"
-          />Outro
-        </label>
-        <br />
-        <p>Escreva algo sobre você:</p>
-        <textarea
-          name="sobre-mim"
-          id="textarea-1"
-          cols="30"
-          rows="5"
-        ></textarea>
-        <br />
-        <label for="checkbox-noticias">
-          <input
+            class="form-check-input"
             type="checkbox"
-            name="promocoes"
-            id="checkbox-noticias"
-          />Deseja receber notícias e promoções incríveis?
-        </label>
-        <br />
-        <button type="submit">Enviar formulário</button>
+            name="remember"
+            id="remember"
+          />Lembre-me
+        </div>
+        <div class="form-group mb-2">
+          <button class="btn btn-primary">Entrar</button>
+        </div>
+      </form>
+      <form action="" method="get">
+        <div class="form-group mb-2">
+          <label class="form-label" for="nome-completo"
+            >Nome completo:
+            <input
+              class="form-control"
+              type="text"
+              name="nome"
+              id="nome-completo"
+              placeholder="Digite seu nome"
+              required
+            />
+          </label>
+        </div>
+        <div class="form-group mb-2">
+          <label class="form-label" for="nome-completo"
+            >E-mail:
+            <input
+              class="form-control"
+              type="email"
+              name="email"
+              id="input-email"
+              placeholder="Digite seu e-mail"
+              required
+            />
+          </label>
+        </div>
+        <div class="form-group mb-2">
+          <label class="form-label" for=""
+            >Estado onde você mora:
+            <select class="form-select" name="estado" id="input-estado">
+              <option value="sp" selected>São Paulo</option>
+              <option value="mg">Minas Gerais</option>
+              <option value="ap">Amapá</option>
+              <option value="rs">Rio Grande so Sul</option>
+            </select>
+          </label>
+        </div>
+        <div class="form-group mb-2">
+          <p>Selecione a sua foto:</p>
+          <input
+            class="form-control"
+            type="file"
+            name="foto"
+            id="foto-perfil"
+          />
+        </div>
+        <div class="form-group mb-2">
+          <p>Comida favoritas:</p>
+          <label class="form-label" for="comida-1">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="comida-favorita"
+              id="comida-1"
+              value="pizza"
+              checked
+            />Pizza
+            <input
+              class="form-check-input"
+              type="radio"
+              name="comida-favorita"
+              id="comida-2"
+              value="sorvete"
+            />Sorvete
+            <input
+              class="form-check-input"
+              type="radio"
+              name="comida-favorita"
+              id="comida-3"
+              value="Pão de queijo"
+            />Pão de queijo
+            <input
+              class="form-check-input"
+              type="radio"
+              name="comida-favorita"
+              id="comida-4"
+              value="outro"
+            />Outro
+          </label>
+        </div>
+        <div class="form-group mb-2">
+          <p>Escreva algo sobre você:</p>
+          <textarea
+            class="form-control"
+            name="sobre-mim"
+            id="textarea-1"
+            cols="30"
+            rows="5"
+          ></textarea>
+        </div>
+        <div class="form-group mb-2">
+          <label class="form-label" for="checkbox-noticias">
+            <input
+              class="form-check-label"
+              type="checkbox"
+              name="promocoes"
+              id="checkbox-noticias"
+            />Deseja receber notícias e promoções incríveis?
+          </label>
+        </div>
+        <div class="form-group mb-2">
+          <button class="btn btn-primary" type="submit">
+            Enviar formulário
+          </button>
+        </div>
       </form>
     </main>
   </body>
